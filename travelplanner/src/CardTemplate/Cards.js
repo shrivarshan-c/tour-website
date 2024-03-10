@@ -6,6 +6,7 @@ import vector3 from './solar_bookmark-circle-broken.png'
 function Cards()
 {
     return(
+        <div className="cards">
         <div className="card">
             <div className="desc"><p className="sub">Discover</p><p className="main1">Uncover the hidden gems<br></br> of our country</p></div>
             <div className="allcards">
@@ -15,6 +16,7 @@ function Cards()
                 <div className="card3"> <div className="vectors"><img src= {vector2}></img><img src = {vector3}></img></div><p>COCHIN</p> <button>View Details</button></div>
             </div>
             
+        </div>
         </div>
     );
     
