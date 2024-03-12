@@ -1,8 +1,18 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useLocation } from 'react-router-dom';
+
 import './nav.css';
 
 function Navbar() {
+  function handleSignup() {
+    window.location.href = '/signup';
+  }
+
+  function handleLogin() {
+    window.location.href = '/login';
+  }
+
   return (
     
     <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
@@ -30,8 +40,13 @@ function Navbar() {
             </li>
           </ul>
           <div className="login-signup d-flex align-items-center">
+<<<<<<< HEAD
             <a href="#signup" className="signup-butox ">SignUp</a>
             <a href="#login" className="login-butox">Login</a>
+=======
+            <button onClick={handleSignup} className="text-black text-decoration-none signup-button">Signup</button>
+            <button onClick={handleLogin} className="text-white text-decoration-none px-3 py-1 bg-black rounded-3 ml-5">Login</button>
+>>>>>>> 14e4a22fe4f1d1862dd1e3caa1321ca7a8a01b30
           </div>
         </div>
       </div>
@@ -53,10 +68,16 @@ function MainSection() {
 }
 
 function Nav() {
+   const location = useLocation();
   return (
-    <div className="background-image">
-      <Navbar />
-      <MainSection />
+    <div className="background-image" style={{ backgroundImage: 'url(./image\ 4.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'multiply' }}>
+     <Navbar />
+      {location.pathname !== '/signup' &&  location.pathname !== '/login' &&  ( // Check if not on signup route
+        <>
+          <MainSection />  
+       
+        </>
+      )}
     </div>
   );
 }
