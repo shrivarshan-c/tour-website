@@ -4,6 +4,7 @@ import './nav.css';
 
 function Navbar() {
   return (
+    
     <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
       <div className="container">
         <a className="navbar-brand" href="#">LOGO</a>
@@ -29,8 +30,8 @@ function Navbar() {
             </li>
           </ul>
           <div className="login-signup d-flex align-items-center">
-            <a href="#signup" className="text-white text-decoration-none signup-button">SignUp</a>
-            <a href="#login" className="text-white text-decoration-none px-3 py-1 bg-black rounded-3 ml-5">Login</a>
+            <a href="#signup" className="signup-butox ">SignUp</a>
+            <a href="#login" className="login-butox">Login</a>
           </div>
         </div>
       </div>
@@ -45,7 +46,7 @@ function MainSection() {
         <h1 className="its">IT'S TIME TO</h1>
         <h1 className="adv">ADVENTURE</h1>
         <p className="par">Welcome to our South India guide! Explore stunning landscapes, vibrant cities, and rich culture. Discover <br/> top spots and create lasting memories.</p>
-        <button className="discover">Discover destination</button>
+        <button className="discover123">Discover destination</button>
       </section>
     </main>
   );
